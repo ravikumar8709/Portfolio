@@ -83,9 +83,8 @@ export default function Portfolio() {
       description:
         "OpenCV integrated attendance management system with Java backend. Features real-time face detection and automated attendance tracking.",
       image: facialRecognitionImg,
-      technologies: ["Java", "OpenCV", "Spring Boot", "MySQL", "React"],
-      githubUrl:
-        "https://github.com/ravikumar8709/FACE-RECOGNIZATION-ATTENDANCE-SYSTEM.git",
+      technologies: ["Python", "OpenCV", "face_recognition", "NumPy", "CSV", "Datetime"],
+      githubUrl: "https://github.com/ravikumar8709/FACE-RECOGNIZATION-ATTENDANCE-SYSTEM.git",
     },
     {
       title: "Smart Door Lock",
