@@ -8,6 +8,7 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { ContactCard } from "@/components/ContactCard";
 import { BackgroundAnimation } from "@/components/BackgroundAnimation";
 import { AnimatedTimeline } from "@/components/AnimatedTimeline";
+
 import {
   Download,
   User,
@@ -144,7 +145,7 @@ export default function Portfolio() {
         <div className="container mx-auto text-center relative z-20">
           <div className="animate-fade-in-down">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent drop-shadow-lg">
-              Java & Deep Learning Developer
+              Java, AIML and Deep Learning Developer
             </h1>
           </div>
 
@@ -193,31 +194,33 @@ export default function Portfolio() {
           </div>
 
           <div className="space-y-12">
-           <Card className="bg-gradient-card shadow-hero max-w-4xl mx-auto border-border/50 card-hover">
-  <div className="flex items-center p-8">
-    <img
-      src="/profile.png" // place your image in the public folder
-      alt="Ravi Kumar"
-      className="rounded-full w-36 h-36 object-cover border-4 border-primary shadow-md mr-8"
-    />
-    <div className="flex-1 text-center">
-      <CardHeader>
-        <CardTitle className="text-2xl">Passionate Developer</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <TypingAnimation 
-          text="Hi, I'm Ravi Kumar — passionate about Java development and Deep Learning applications. 
+            <Card className="bg-gradient-card shadow-hero max-w-4xl mx-auto border-border/50 card-hover">
+              <div className="flex items-center p-8">
+                <img
+                  src="/profile.jpg"
+                  alt="Ravi Kumar"
+                  className="rounded-full w-36 h-36 object-cover border-4 border-primary shadow-md mr-8"
+                />
+
+                <div className="flex-1 text-center">
+                  <CardHeader>
+                    <CardTitle className="text-2xl">
+                      Passionate Developer
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <TypingAnimation
+                      text="Hi, I'm Ravi Kumar — passionate about Java development and Deep Learning applications. 
           I've built projects ranging from AI-powered surveillance systems to full-stack web applications. 
           My expertise lies in creating scalable, intelligent solutions that bridge traditional 
-          software engineering with modern AI technologies." 
-          speed={10}
-          pause={100000000}       
-        />
-      </CardContent>
-    </div>
-  </div>
-</Card>
-
+          software engineering with modern AI technologies."
+                      speed={10}
+                      pause={100000000}
+                    />
+                  </CardContent>
+                </div>
+              </div>
+            </Card>
 
             <div>
               <h3 className="text-2xl font-bold text-center mb-8">
