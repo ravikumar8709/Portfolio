@@ -7,7 +7,9 @@ import { SkillBadge } from "@/components/SkillBadge";
 import { ProjectCard } from "@/components/ProjectCard";
 import { ContactCard } from "@/components/ContactCard";
 import { BackgroundAnimation } from "@/components/BackgroundAnimation";
+// 🔥 Replace old imports
 import { AnimatedTimeline } from "@/components/AnimatedTimeline";
+import { EducationTimeline } from "@/components/EducationCard"; // 🔥
 
 import {
   Download,
@@ -23,6 +25,7 @@ import {
   GitBranch,
   Cloud,
   Globe,
+  GraduationCap, // 🔥 for Education heading
 } from "lucide-react";
 
 // Import project images
@@ -30,7 +33,7 @@ import expenseTrackerImg from "@/assets/expense-tracker.jpg";
 import surveillanceSystemImg from "@/assets/surveillance-system.jpg";
 import facialRecognitionImg from "@/assets/facial-recognition.jpg";
 import canteenWalletImg from "@/assets/canteen-wallet.jpg";
-
+import doorlock from "@/assets/door-lock.jpg";
 export default function Portfolio() {
   const [scrollY, setScrollY] = useState(0);
 
@@ -65,7 +68,6 @@ export default function Portfolio() {
         "https://github.com/ravikumar8709/Object-detection-for-smart-surveillance-system.git",
       featured: true,
     },
-
     {
       title: "Edunexus Innovation",
       description:
@@ -76,7 +78,6 @@ export default function Portfolio() {
       liveUrl: "https://edunexus-innovation.vercel.app/",
       featured: true,
     },
-
     {
       title: "Facial Recognition Attendance",
       description:
@@ -86,6 +87,17 @@ export default function Portfolio() {
       githubUrl:
         "https://github.com/ravikumar8709/FACE-RECOGNIZATION-ATTENDANCE-SYSTEM.git",
     },
+    {
+      title: "Smart Door Lock",
+      description:
+        "An IoT-based smart door lock system built using ESP32-CAM and Telegram bot for secure and remote access control.",
+      image: doorlock, // Replace with actual lock image if available
+      technologies: ["IoT", "ESP32-CAM", "Telegram Bot", "C++"],
+      githubUrl:
+        "https://github.com/ravikumar8709/IOT-BASED-DOOR-LOCK-SYSTEM.git",
+      // liveUrl: "", // IoT projects usually don’t have a live demo
+    },
+
     {
       title: "Campus card payment system",
       description:
@@ -114,6 +126,12 @@ export default function Portfolio() {
               className="text-muted-foreground hover:text-primary transition-smooth"
             >
               About
+            </button>
+            <button
+              onClick={() => scrollToSection("education")} // 🔥 updated target
+              className="text-muted-foreground hover:text-primary transition-smooth"
+            >
+              Education
             </button>
             <button
               onClick={() => scrollToSection("skills")}
@@ -211,9 +229,9 @@ export default function Portfolio() {
                   <CardContent>
                     <TypingAnimation
                       text="Hi, I'm Ravi Kumar — passionate about Java development and Deep Learning applications. 
-          I've built projects ranging from AI-powered surveillance systems to full-stack web applications. 
-          My expertise lies in creating scalable, intelligent solutions that bridge traditional 
-          software engineering with modern AI technologies."
+I've built projects ranging from AI-powered surveillance systems to full-stack web applications. 
+My expertise lies in creating scalable, intelligent solutions that bridge traditional 
+software engineering with modern AI technologies."
                       speed={10}
                       pause={100000000}
                     />
@@ -222,18 +240,34 @@ export default function Portfolio() {
               </div>
             </Card>
 
-            <div>
-              <h3 className="text-2xl font-bold text-center mb-8">
-                My Journey
-              </h3>
-              <AnimatedTimeline />
-            </div>
+            {/* My Journey Timeline */}
+            {/* <div>
+        <h3 className="text-2xl font-bold text-center mb-8">
+          My Journey
+        </h3>
+        <AnimatedTimeline />
+      </div> */}
           </div>
         </div>
       </section>
 
+      {/* Education Section */}
+      <section id="education" className="py-20 px-4 bg-muted/20">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4 flex items-center justify-center gap-3">
+              <GraduationCap className="w-8 h-8 text-primary" />
+              Education
+            </h2>
+          </div>
+
+          {/* Use your new EducationTimeline component here */}
+          <EducationTimeline />
+        </div>
+      </section>
+
       {/* Skills Section */}
-      <section id="skills" className="py-20 px-4 bg-muted/20">
+      <section id="skills" className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4 flex items-center justify-center gap-3">
@@ -257,7 +291,7 @@ export default function Portfolio() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-4">
+      <section id="projects" className="py-20 px-4 bg-muted/20">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4 flex items-center justify-center gap-3">
@@ -284,7 +318,7 @@ export default function Portfolio() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-4 bg-muted/20">
+      <section id="contact" className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4 flex items-center justify-center gap-3">
