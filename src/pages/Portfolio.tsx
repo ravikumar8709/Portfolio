@@ -43,18 +43,23 @@ export default function Portfolio() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const skills = [
-    { name: "Java", icon: Coffee, level: "advanced" as const },
-    { name: "Hibernate", icon: Database, level: "intermediate" as const },
-    { name: "TensorFlow", icon: Brain, level: "intermediate" as const },
-    { name: "OpenCV", icon: Eye, level: "intermediate" as const },
-    { name: "React", icon: Globe, level: "intermediate" as const },
-    { name: "Node.js", icon: Server, level: "intermediate" as const },
-    { name: "MySQL", icon: Database, level: "advanced" as const },
-    { name: "MongoDB", icon: Database, level: "intermediate" as const },
-    { name: "Git", icon: GitBranch, level: "advanced" as const },
-    { name: "AWS", icon: Cloud, level: "beginner" as const },
-  ];
+const skills = [
+  { name: "Java", icon: Coffee, level: "advanced" as const },
+  { name: "Python", icon: Coffee, level: "advanced" as const },
+  { name: "HTML", icon: Globe, level: "advanced" as const },
+  { name: "CSS", icon: Globe, level: "advanced" as const },
+  { name: "JavaScript", icon: Globe, level: "advanced" as const },
+  { name: "React.js", icon: Globe, level: "intermediate" as const },
+  { name: "Node.js", icon: Server, level: "intermediate" as const },
+  { name: "Express.js", icon: Server, level: "intermediate" as const },
+  { name: "SQL", icon: Database, level: "advanced" as const },
+  { name: "OpenCV", icon: Eye, level: "intermediate" as const },
+  { name: "Image Processing", icon: Eye, level: "intermediate" as const },
+  { name: "Object Detection", icon: Eye, level: "intermediate" as const },
+  { name: "CNN", icon: Brain, level: "intermediate" as const },
+  { name: "Data Structures", icon: Database, level: "intermediate" as const },
+];
+
 
   const projects = [
     {
