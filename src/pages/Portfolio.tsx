@@ -29,11 +29,14 @@ import {
 } from "lucide-react";
 
 // Import project images
-import expenseTrackerImg from "@/assets/expense-tracker.jpg";
+import expenseTrackerImg from "@/assets/edu.png";
 import surveillanceSystemImg from "@/assets/surveillance-system.jpg";
 import facialRecognitionImg from "@/assets/facial-recognition.jpg";
-import canteenWalletImg from "@/assets/canteen-wallet.jpg";
+import canteenWalletImg from "@/assets/campus.png";
 import doorlock from "@/assets/door-lock.jpg";
+import chatbotImg from "@/assets/chatbot.jpg";
+import employeeManagementImg from "@/assets/Home.jpg";
+
 export default function Portfolio() {
   const [scrollY, setScrollY] = useState(0);
 
@@ -44,24 +47,52 @@ export default function Portfolio() {
   }, []);
 
 const skills = [
-  { name: "Java", icon: Coffee, level: "advanced" as const },
   { name: "Python", icon: Coffee, level: "advanced" as const },
+  { name: "Java", icon: Coffee, level: "advanced" as const },
+
+  { name: "React.js", icon: Globe, level: "intermediate" as const },
   { name: "HTML", icon: Globe, level: "advanced" as const },
   { name: "CSS", icon: Globe, level: "advanced" as const },
   { name: "JavaScript", icon: Globe, level: "advanced" as const },
-  { name: "React.js", icon: Globe, level: "intermediate" as const },
-  { name: "Node.js", icon: Server, level: "intermediate" as const },
-  { name: "Express.js", icon: Server, level: "intermediate" as const },
-  { name: "SQL", icon: Database, level: "advanced" as const },
+
+  { name: "Machine Learning", icon: Brain, level: "intermediate" as const },
+  { name: "Deep Learning (CNN)", icon: Brain, level: "intermediate" as const },
+  { name: "Computer Vision", icon: Eye, level: "intermediate" as const },
+
+  { name: "RAG", icon: Brain, level: "intermediate" as const },
+  { name: "Prompt Engineering", icon: Brain, level: "intermediate" as const },
+  { name: "LLM", icon: Brain, level: "intermediate" as const },
+
+  { name: "TensorFlow", icon: Brain, level: "intermediate" as const },
+  { name: "PyTorch", icon: Brain, level: "intermediate" as const },
   { name: "OpenCV", icon: Eye, level: "intermediate" as const },
-  { name: "Image Processing", icon: Eye, level: "intermediate" as const },
-  { name: "Object Detection", icon: Eye, level: "intermediate" as const },
-  { name: "CNN", icon: Brain, level: "intermediate" as const },
+  { name: "LangChain", icon: Brain, level: "intermediate" as const },
+
+  { name: "MySQL", icon: Database, level: "advanced" as const },
+
   { name: "Data Structures", icon: Database, level: "intermediate" as const },
+  { name: "Algorithms", icon: Database, level: "intermediate" as const },
 ];
 
 
   const projects = [
+     {
+      title: "Context-Aware AI Chatbot",
+      description:
+        "RAG-based chatbot for answering queries from PDF and web data using semantic search and LLMs.",
+      image: chatbotImg,
+      technologies: [
+        "Python",
+        "LangChain",
+        "FAISS",
+        "HuggingFace",
+        "Groq",
+        "Streamlit",
+      ],
+      githubUrl:
+        "https://github.com/ravikumar8709/context-aware-ai-chatbot",
+      featured: true,
+    },
     {
       title: "Smart Surveillance System",
       description:
@@ -83,6 +114,17 @@ const skills = [
       liveUrl: "https://edunexus-innovation.vercel.app/",
       featured: true,
     },
+    {
+  title: "Employee Management System",
+  description:
+    "Java-based application integrated with SQL using JDBC to manage employee records with full CRUD operations including add, update, delete, and search functionality.",
+  image: employeeManagementImg, // add your image import
+  videoUrl: "/ems-demo.mp4", // optional (or remove if not needed)
+  technologies: ["Java", "SQL", "JDBC"],
+  githubUrl:
+    "https://github.com/your-username/Employee-Management-System",
+  featured: false,
+},
     {
       title: "Facial Recognition Attendance",
       description:
@@ -108,8 +150,8 @@ const skills = [
         "Full-stack MERN application with role-based authentication for digital canteen payments and management.",
       image: canteenWalletImg,
       technologies: ["MongoDB", "Express", "React", "Node.js", "JWT"],
-      githubUrl: "https://github.com/yourusername/canteen-wallet",
-      liveUrl: "https://canteen-wallet.demo.com",
+      githubUrl: "https://github.com/ravikumar8709/SMART-CAMPUS-CART",
+      liveUrl: "https://smart-campus-cart.vercel.app",
     },
   ];
 
@@ -232,10 +274,11 @@ const skills = [
                   </CardHeader>
                   <CardContent>
                     <TypingAnimation
-                      text="Hi, I'm Ravi Kumar — passionate about Java development and Deep Learning applications. 
-I've built projects ranging from AI-powered surveillance systems to full-stack web applications. 
-My expertise lies in creating scalable, intelligent solutions that bridge traditional 
-software engineering with modern AI technologies."
+                      text="Hi, I'm Ravi Kumar — an AI & Full Stack Developer passionate about building intelligent, real-world solutions.
+
+I specialize in Machine Learning, Deep Learning, and Computer Vision, and have developed projects ranging from AI-powered surveillance systems to scalable full-stack applications.
+
+My focus is on combining strong software engineering with modern AI technologies to create impactful and efficient systems."
                       speed={10}
                       pause={100000000}
                     />

@@ -30,7 +30,7 @@ const educationData: EducationItem[] = [
     year: "2022 - 2026",
     degree: "B.Tech in Computer Science",
     institution: "Kalasalingam Academy of Research and Education",
-    score: "7.95 CGPA",
+    score: "7.96 CGPA",
     location: "Virudunagar, Tamil Nadu, India",
   },
 ];
