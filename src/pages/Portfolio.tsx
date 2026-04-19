@@ -35,7 +35,7 @@ import facialRecognitionImg from "@/assets/facial-recognition.jpg";
 import canteenWalletImg from "@/assets/campus.png";
 import doorlock from "@/assets/door-lock.jpg";
 import chatbotImg from "@/assets/chatbot.jpg";
-import employeeManagementImg from "@/assets/Home.jpg";
+import employeeManagementImg from "@/assets/image.png";
 
 export default function Portfolio() {
   const [scrollY, setScrollY] = useState(0);
@@ -76,6 +76,15 @@ const skills = [
 
 
   const projects = [
+    {
+      title: "Campus card payment system",
+      description:
+        "Full-stack MERN application with role-based authentication for digital canteen payments and management.",
+      image: canteenWalletImg,
+      technologies: ["MongoDB", "Express", "React", "Node.js", "JWT"],
+      githubUrl: "https://github.com/ravikumar8709/SMART-CAMPUS-CART",
+      liveUrl: "https://smart-campus-cart.vercel.app",
+    },
      {
       title: "Context-Aware AI Chatbot",
       description:
@@ -91,6 +100,7 @@ const skills = [
       ],
       githubUrl:
         "https://github.com/ravikumar8709/context-aware-ai-chatbot",
+        liveUrl: "https://context-aware-ai-chatbot-qbx6sj6gfiztybdh9xjnll.streamlit.app/",
       featured: true,
     },
     {
@@ -119,11 +129,11 @@ const skills = [
   description:
     "Java-based application integrated with SQL using JDBC to manage employee records with full CRUD operations including add, update, delete, and search functionality.",
   image: employeeManagementImg, // add your image import
-  videoUrl: "/ems-demo.mp4", // optional (or remove if not needed)
+   // optional (or remove if not needed)
   technologies: ["Java", "SQL", "JDBC"],
   githubUrl:
     "https://github.com/your-username/Employee-Management-System",
-  featured: false,
+  featured: true,
 },
     {
       title: "Facial Recognition Attendance",
@@ -144,15 +154,7 @@ const skills = [
       // liveUrl: "", // IoT projects usually don’t have a live demo
     },
 
-    {
-      title: "Campus card payment system",
-      description:
-        "Full-stack MERN application with role-based authentication for digital canteen payments and management.",
-      image: canteenWalletImg,
-      technologies: ["MongoDB", "Express", "React", "Node.js", "JWT"],
-      githubUrl: "https://github.com/ravikumar8709/SMART-CAMPUS-CART",
-      liveUrl: "https://smart-campus-cart.vercel.app",
-    },
+    
   ];
 
   const scrollToSection = (sectionId: string) => {
